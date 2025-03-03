@@ -2,60 +2,6 @@
 Overview
 ========
 
-.. start-badges
-
-.. list-table::
-    :stub-columns: 1
-
-
-    * - package
-      - | |version| |commits-since|
-        | |supported-versions| |supported-implementations| |wheel|
-        | |license|
-    * - quality
-      - | |codacy| |codecov|
-    * - tests
-      - | |travis|
-
-.. |travis| image:: https://api.travis-ci.org/jonathanelscpt/valr-python.svg?branch=master
-    :alt: Travis-CI Build Status
-    :target: https://travis-ci.org/jonathanelscpt/valr-python
-
-.. |version| image:: https://img.shields.io/pypi/v/valr-python.svg
-    :alt: PyPI Package latest release
-    :target: https://pypi.org/project/valr-python
-
-.. |wheel| image:: https://img.shields.io/pypi/wheel/valr-python.svg
-    :alt: PyPI Wheel
-    :target: https://pypi.org/project/valr-python
-
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/valr-python.svg
-    :alt: Supported versions
-    :target: https://pypi.org/project/valr-python
-
-.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/valr-python.svg
-    :alt: Supported implementations
-    :target: https://pypi.org/project/valr-python
-
-.. |commits-since| image:: https://img.shields.io/github/commits-since/jonathanelscpt/valr-python/v0.2.7.svg
-    :alt: Commits since latest release
-    :target: https://github.com/jonathanelscpt/valr-python/compare/v0.2.7...master
-
-.. |license| image:: https://img.shields.io/pypi/l/valr-python.svg
-    :alt: PyPI License
-    :target: https://pypi.org/project/valr-python
-
-.. |codacy| image:: https://api.codacy.com/project/badge/Grade/cb879e2a6be142b88d4e0c2b3a294fb3
-    :target: https://www.codacy.com/manual/jonathanelscpt/valr-python?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jonathanelscpt/valr-python&amp;utm_campaign=Badge_Grade
-    :alt: Codacy Code Quality Status
-
-.. |codecov| image:: https://codecov.io/gh/jonathanelscpt/valr-python/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/jonathanelscpt/valr-python
-    :alt: Coverage Status
-
-
-.. end-badges
-
 
 A Python SDK for VALR cryptocurrency exchange APIs.
 
@@ -65,11 +11,9 @@ Installation
 
 ::
 
-    pip install valr-python
-
-You can also install the in-development version with::
-
-    pip install https://github.com/jonathanelscpt/valr-python/archive/master.zip
+    git clone https://github.com/VALR-Tech/valr-python
+    cd valr-python
+    python setup.py install
 
 
 
