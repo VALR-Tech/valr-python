@@ -1,4 +1,4 @@
-# Valr BTC Bot
+# VALR BTC Bot
 
 Simple VALR trading Bot for Test
 
