@@ -70,3 +70,8 @@ setup(
     extras_require={
     },
 )
+
+try:
+    from valr_python import *
+except:
+    pass
